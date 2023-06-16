@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 /**
  * main - A function that determines if the statement are true
  * Return:0 (succes)
