@@ -1,16 +1,16 @@
 #include <stdio.h>
 /**
- * main - a function that prints numbers of base 10
- * Return:0 exit program
+ * main - prints numbers 0-9
+ * Return:0 exit
  */
 int main(void)
 {
-	int n;
+	int i;
 
-	for (n = 0; n <= 9; n++)
+	for (i = 0; i <= 9; i++)
 	{
-		printf("%d", n);
+		printf("%d", i);
 	}
-	printf('\n');
+	printf("\n");
 	return (0);
 }
