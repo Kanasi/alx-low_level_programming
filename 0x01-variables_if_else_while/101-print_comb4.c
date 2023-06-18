@@ -1,4 +1,4 @@
-#include <stio.h>
+#include <stdio.h>
 /**
  * main - function prints combination of 3 possible numbers
  * Return:0 end program
