@@ -4,7 +4,7 @@
  * add - adds two integers
  */
 
-int add(int a, int b);
+int add(int a, int b)
 {
 	int sum = a + b;
 
