@@ -2,6 +2,9 @@
 
 /**
  * add - adds two integers
+ * Return: sum exit
+ * @a: first member
+ * @b: second member
  */
 
 int add(int a, int b)
