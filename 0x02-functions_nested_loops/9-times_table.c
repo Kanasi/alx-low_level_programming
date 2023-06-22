@@ -1,24 +1,23 @@
 #include "main.h"
 
 /**
- * times_table - prints times table
+ * times_table - prints 9 times table
  */
 
 void times_table(void)
 {
-	int x, y;
+	int x, y, t;
 
 	for (x = 0; x <= 9; x++)
 	{
 		for (y = 0; y <= 9; y++)
 		{
-			int t = x * y;
+			t = x * y;
 
 			if (y == 0)
 			{
 				_putchar(t + '0');
 			}
-
 			if (t < 10 && y != 0)
 			{
 				_putchar(',');
@@ -32,7 +31,7 @@ void times_table(void)
 				_putchar((t / 10) + '0');
 				_putchar((t % 10) + '0');
 			}
-			_putchar('\n');
 		}
+		_putchar('\n');
 	}
 }
