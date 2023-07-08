@@ -10,7 +10,7 @@ int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	return (_sqrt(n, 1));
+	return (_sqrt(n, 0));
 }
 
 /**
@@ -19,6 +19,7 @@ int _sqrt_recursion(int n)
  * @i: second member
  * Return: square root of number
  */
+
 int _sqrt(int n, int i)
 {
 	if (i * i > n)
