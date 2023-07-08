@@ -1,5 +1,8 @@
 #include "main.h"
 
+int _strlen_recursion(char *s);
+int palind(char *s, int i, int len);
+
 /**
  * is_palindrome - function return 1 if string is a palindrome and 0 ele
  * @s: string
