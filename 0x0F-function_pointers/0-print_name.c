@@ -11,12 +11,6 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
-
-	while (*name != '\0')
-	{
-		_putchar(*name);
-		name++;
-	}
-	_putchar('\n');
+	if (name != NULL && f != NULL)
+		f(name);
 }
