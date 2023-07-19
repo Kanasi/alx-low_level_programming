@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#incllude "function_pointers.h"
+#include "function_pointers.h"
 
 /**
  * array_iterator - iterate through the array
