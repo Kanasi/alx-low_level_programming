@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 /**
  * _puts_recursion - function puts string to output;
