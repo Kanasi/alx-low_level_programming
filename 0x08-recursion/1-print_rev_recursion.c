@@ -8,17 +8,9 @@
 
 void _print_rev_recursion(char *s)
 {
-	int length = 0;
-
-	while (s[length] != '\0')
+	if (*s)
 	{
-		length++;
+		_print_rev_recursion(s + 1);
+		_putchar(*s);
 	}
-
-	for (int i = length - 1; i >= 0; i--)
-	{
-		_putchar(s[i]);
-	}
-
-	_putchar('\n');
 }
