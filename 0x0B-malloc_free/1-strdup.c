@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * _strdup - duplicate string
  * @str: string to duplicate
@@ -7,21 +8,19 @@
 
 char *_strdup(char *str)
 {
-	int i = 1, j = 0;
 	char *ptr;
 
-	if (str == 0)
-		return (NULL);
-	while (str[i])
-		i++;
-	ptr = (char *)malloc(sizeof(char) * i + 1);
-	if (s == NULL)
-		return (NULL);
-	while (j < i)
+	if (str == NULL)
 	{
-		ptr[j] = str[j];
-		j++;
+		return (NULL);
 	}
-	ptr[j] = '\0';
+
+	ptr = malloc(strlen(str) + 1);
+
+	if (ptr == NULL)
+	{
+		return (NULL);
+	}
+	strcpy(ptr, str);
 	return (ptr);
 }
