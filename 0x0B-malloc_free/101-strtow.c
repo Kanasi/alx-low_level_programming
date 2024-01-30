@@ -33,10 +33,10 @@ char **strtow(char *str)
 			continue;
 		while (*(str + k) != ' ' && *(str + k++))
 			len++;
-		ptr[current] = malloc(sizeof(char) * len + 1);
+		ptr[current] = malloc(sizeof(char) * (len + 1));
 		if (!ptr[current])
 		{
-			while (current-- >= 0)
+			while (current-- > 0)
 				free(ptr[current]);
 			free(ptr);
 			return (NULL);
