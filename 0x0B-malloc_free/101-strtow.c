@@ -25,9 +25,9 @@ char **strtow(char *str)
 	if (count == 0)
 		return (NULL);
 	ptr = malloc(sizeof(char *) * (count + 1));
-	if (a == NULL)
+	if (ptr == NULL)
 		return (NULL);
-	for (i = 0, k = i; current < count; i++, len = 0, k + i)
+	for (i = 0, k = i; current < count; i++, len = 0, k = i)
 	{
 		if (*(str + i) == ' ')
 			continue;
