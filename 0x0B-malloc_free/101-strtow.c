@@ -13,37 +13,46 @@ char **strtow(char *str)
 
 	if (str == NULL || *str == '\0')
 		return (NULL);
-	for (i = 0; *(str + i) != '\0'; i++)
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (*(str + i) != ' ')
+		if (str[i] != ' ')
 			count++;
-		while (*(str + i) != ' ' && *(str + i))
+		while (str[i] != ' ' && str[i] != '\0')
 			i++;
-		if (!*(str + i))
+		if (!str[i])
 			break;
 	}
+
 	if (count == 0)
 		return (NULL);
-	ptr = malloc(sizeof(char *) * (count + 1));
-	if (ptr == NULL)
-		return (NULL);
-	for (i = 0, k = i; current < count; i++, len = 0, k = i)
+
+	for (i = 0, current = 0; current < count; i++)
 	{
-		if (*(str + i) == ' ')
-			continue;
-		while (*(str + k) != ' ' && *(str + k++))
+
+		while (str[i] == ' ')
+			i++;
+
+		len = 0;
+		while (str[i + len] != ' ' && str[i + len] != '\0')
 			len++;
+
 		ptr[current] = malloc(sizeof(char) * (len + 1));
 		if (!ptr[current])
 		{
-			while (current-- > 0)
-				free(ptr[current]);
+			while (current > 0)
+				free(ptr[--current]);
 			free(ptr);
 			return (NULL);
 		}
-		for (n = 0; i < k; i++, n++)
-			ptr[current][n] = *(str + i);
+
+		for (n = 0; n < len; n++)
+			ptr[current][n] = str[i + n];
+
 		ptr[current][n] = '\0';
+
+		current++;
+		i += len;
 	}
 	ptr[count] = NULL;
 	return (ptr);
