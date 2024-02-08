@@ -1,0 +1,2 @@
+typedef and structs concept
+
